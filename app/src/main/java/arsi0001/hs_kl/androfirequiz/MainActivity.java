@@ -1,6 +1,7 @@
 package arsi0001.hs_kl.androfirequiz;
 
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.UserHandle;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
@@ -78,8 +79,12 @@ public class MainActivity extends AppCompatActivity {
                 if(dataSnapshot.child(nutzer).exists()){
                     if(!nutzer.isEmpty()){
                         Nutzer login = dataSnapshot.child(nutzer).getValue(Nutzer.class);
-                        if(login.get_passwort().equals(passwort))
+                        if(login.get_passwort().equals(passwort)) {
                             Toast.makeText(MainActivity.this, "Login erfolgreich!", Toast.LENGTH_SHORT).show();
+                            Intent startseiteActivity = new Intent(MainActivity.this, Startseite.class);
+                            startActivity(startseiteActivity);
+                            finish();
+                        }
                         else
                             Toast.makeText(MainActivity.this, "Falsches Passwort!", Toast.LENGTH_SHORT).show();
                     }
