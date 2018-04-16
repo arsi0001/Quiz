@@ -19,11 +19,11 @@ public class Startseite extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_startseite);
 
-        _slideViewPager = (ViewPager) findViewById(R.id.slideViewPager);
+        /*_slideViewPager = (ViewPager) findViewById(R.id.slideViewPager);
         _punkteLayout = (LinearLayout) findViewById(R.id.punkteLayout);
 
         sliderAdapter = new SliderAdapter(this);
 
-        _slideViewPager.setAdapter(sliderAdapter);
+        _slideViewPager.setAdapter(sliderAdapter);*/
     }
 }
